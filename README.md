@@ -15,6 +15,9 @@ Flix is an app that allows users to browse movies from the [The Movie Database A
 
 MP4 URL: https://imgur.com/a/xAz1DsB
 
+## NOTES
+The CollectionView was a challenge. I couldn't get the movie posters to display at an appropriate size no matter what.
+
 ---
 
 ## Flix Part 1
@@ -27,6 +30,3 @@ MP4 URL: https://imgur.com/a/xAz1DsB
 - [x] (3pts) User can view the movie poster image for each movie.
 
 GIF URL: https://imgur.com/a/14EiGMp
-
-### Notes
-Describe any challenges encountered while building the app.
