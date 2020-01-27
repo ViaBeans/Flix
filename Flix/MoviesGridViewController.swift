@@ -23,13 +23,14 @@ class MoviesGridViewController: UIViewController, UICollectionViewDataSource, UI
         
         let layout = collectionView.collectionViewLayout as! UICollectionViewFlowLayout
         
-        layout.minimumLineSpacing = 4
+        layout.minimumInteritemSpacing = 5
+        layout.minimumLineSpacing = 5
         
-        layout.minimumLineSpacing = 4
-        
-        let width = view.frame.size.width/3 - 8
-        
-        layout.itemSize = CGSize(width: 400, height: 400)
+        let cellsPerLine: CGFloat = 2;
+        let interItemSpacingTotal = layout.minimumInteritemSpacing * (cellsPerLine - 1)
+        let width = collectionView.frame.size.width / cellsPerLine - interItemSpacingTotal / cellsPerLine;
+        layout.itemSize = CGSize(width: width, height: width * 3 / 2)
+
         
         let url = URL(string: "https://api.themoviedb.org/3/movie/297762/similar?api_key=a07e22bc18f5cb106bfe4cc1f83ad8ed")!
                 let request = URLRequest(url: url, cachePolicy: .reloadIgnoringLocalCacheData, timeoutInterval: 10)
